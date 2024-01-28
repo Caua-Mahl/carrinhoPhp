@@ -5,7 +5,7 @@ class Cart{
         $this->setTotal($produto);
         if (count($this->getCart())>0){
             foreach ($this->getCart() as $produtoInCart){
-                if ($produtoInCart->getId() === $produto->getID()){
+                if ($produtoInCart->getId() === $produto->getId()){
                     $quantidade = $produtoInCart->getQuantidade() + $produto->getQuantidade();
                     $produtoInCart->setQuantidade($quantidade);
                     $inCart = true;
@@ -18,7 +18,7 @@ class Cart{
         }
     } 
 
-    public function setProdutosInCart($produto){
+    public function setProdutosInCart(Produto $produto){
         $_SESSION['cart']['produtos'][] = $produto;
     }
 
@@ -38,7 +38,7 @@ class Cart{
                     $_SESSION['cart']['total'] -= $produto->getValor() * $produto->getQuantidade();
                 }
             }
-         }
+        }
     }
 
     public function getCart(){
