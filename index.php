@@ -21,8 +21,6 @@ if(isset($_GET["id"])){
     $cart = new Cart;
     $cart->add($produto);
 }
-var_dump($_SESSION['cart']);
-
 ?>
 
 
@@ -34,6 +32,7 @@ var_dump($_SESSION['cart']);
     <title>Carrinho</title>
 </head>
 <body>
+    <a href="/mycart.php">Ir para meu carrinho</a>
     <ul>
         <li>Geladeira <a href="?id=1">Add</a>R$2000</li>
         <li>Monitor <a href="?id=2">Add</a>R$500</li>

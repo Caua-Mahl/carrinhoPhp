@@ -5,7 +5,7 @@ private string $nome;
 private int $valor;
 private int $quantidade;
 
-public function setId($id){
+public function setId(int $id){
     $this->id = $id;
 }
 public function getId(){
